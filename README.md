@@ -1,3 +1,7 @@
+# ⚙ Comandos úteis
+
+- `pnpm generate:component NOME` - Cria um novo component
+
 # 🗂 Estrutura de pastas
 
 O coração do projeto está dentro da pasta `src`, que vai ter a seguinte estrutura:
