@@ -3,8 +3,8 @@ const path = require('path');
 const fs = require('fs');
 const process = require('node:process');
 
-const featuresDir = path.join(process.cwd(), 'src/features');
-const features = fs.readdirSync(featuresDir);
+const modulesDir = path.join(process.cwd(), 'src/modules');
+const modules = fs.readdirSync(modulesDir);
 
 module.exports = {
     description: 'Component Generator',
@@ -16,17 +16,17 @@ module.exports = {
         },
         {
             type: 'list',
-            name: 'feature',
-            message: 'Which feature does this component belong to?',
-            choices: ['ROOT', ...features],
-            when: () => features.length > 0,
+            name: 'module',
+            message: 'Which module does this component belong to?',
+            choices: ['ROOT', ...modules],
+            when: () => modules.length > 0,
         },
     ],
     actions: (answers) => {
         const componentGeneratePath =
-            !answers.feature || answers.feature === 'ROOT'
+            !answers.module || answers.module === 'ROOT'
                 ? 'src/components/'
-                : 'src/features/{{feature}}/components';
+                : 'src/modules/{{module}}/components';
         return [
             {
                 type: 'add',
