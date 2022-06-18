@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
     "lint:fix": "eslint --fix src/**/*.{js,jsx,ts,tsx,json}",
-    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md,json} --config ./.prettierrc"
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md,json} --config ./.prettierrc",
+    "generate:component": "plop component"
   },
   "dependencies": {
     "react": "^18.0.0",
@@ -41,6 +42,7 @@
     "jest-environment-jsdom": "^28.1.1",
     "jest-transform-stub": "^2.0.0",
     "jest-watch-typeahead": "^1.1.0",
+    "plop": "^3.1.1",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "tailwindcss": "^3.1.3",
