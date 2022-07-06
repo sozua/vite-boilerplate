@@ -1,0 +1,8 @@
+{
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.sortMembers": true,
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true,
+    }
+}
